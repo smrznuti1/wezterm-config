@@ -159,6 +159,9 @@ local keys = {
          timemout_miliseconds = 1000,
       }),
    },
+   { key = "UpArrow",   mods = mod.SUPER, action = act.IncreaseFontSize },
+   { key = "DownArrow", mods = mod.SUPER, action = act.DecreaseFontSize },
+   { key = "r",         mods = mod.SUPER, action = act.ResetFontSize },
 }
 
 -- stylua: ignore

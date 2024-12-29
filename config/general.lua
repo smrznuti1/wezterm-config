@@ -6,6 +6,7 @@ return {
    status_update_interval = 1000,
 
    scrollback_lines = 5000,
+   enable_wayland = false,
 
    hyperlink_rules = {
       -- Matches: a URL in parens: (URL)

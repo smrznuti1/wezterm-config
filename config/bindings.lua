@@ -66,8 +66,8 @@ local keys = {
    { key = 'w',          mods = mod.SUPER_REV, action = act.CloseCurrentTab({ confirm = false }) },
 
    -- tabs: navigation
-   { key = '[',          mods = mod.SUPER .. '|SHIFT',     action = act.ActivateTabRelative(-1) },
-   { key = ']',          mods = mod.SUPER .. '|SHIFT',     action = act.ActivateTabRelative(1) },
+   { key = '[',          mods = mod.SUPER,     action = act.ActivateTabRelative(-1) },
+   { key = ']',          mods = mod.SUPER,     action = act.ActivateTabRelative(1) },
    { key = '[',          mods = mod.SUPER_REV, action = act.MoveTabRelative(-1) },
    { key = ']',          mods = mod.SUPER_REV, action = act.MoveTabRelative(1) },
 
@@ -83,32 +83,32 @@ local keys = {
    { key = 'n',          mods = mod.SUPER,     action = act.SpawnWindow },
 
    -- window: zoom window
-   {
-      key = '-',
-      mods = mod.SUPER,
-      action = wezterm.action_callback(function(window, _pane)
-         local dimensions = window:get_dimensions()
-         if dimensions.is_full_screen then
-            return
-         end
-         local new_width = dimensions.pixel_width - 50
-         local new_height = dimensions.pixel_height - 50
-         window:set_inner_size(new_width, new_height)
-      end)
-   },
-   {
-      key = '=',
-      mods = mod.SUPER,
-      action = wezterm.action_callback(function(window, _pane)
-         local dimensions = window:get_dimensions()
-         if dimensions.is_full_screen then
-            return
-         end
-         local new_width = dimensions.pixel_width + 50
-         local new_height = dimensions.pixel_height + 50
-         window:set_inner_size(new_width, new_height)
-      end)
-   },
+   -- {
+   --    key = '-',
+   --    mods = mod.SUPER,
+   --    action = wezterm.action_callback(function(window, _pane)
+   --       local dimensions = window:get_dimensions()
+   --       if dimensions.is_full_screen then
+   --          return
+   --       end
+   --       local new_width = dimensions.pixel_width - 50
+   --       local new_height = dimensions.pixel_height - 50
+   --       window:set_inner_size(new_width, new_height)
+   --    end)
+   -- },
+   -- {
+   --    key = '=',
+   --    mods = mod.SUPER,
+   --    action = wezterm.action_callback(function(window, _pane)
+   --       local dimensions = window:get_dimensions()
+   --       if dimensions.is_full_screen then
+   --          return
+   --       end
+   --       local new_width = dimensions.pixel_width + 50
+   --       local new_height = dimensions.pixel_height + 50
+   --       window:set_inner_size(new_width, new_height)
+   --    end)
+   -- },
 
    -- background controls --
    {

@@ -28,7 +28,7 @@ elseif platform.is_mac then
    }
 elseif platform.is_linux then
    -- options.default_prog = { 'nvim', '-c :term' }
-   options.default_prog = { 'nvim' }
+   options.default_prog = { 'zsh' }
    options.launch_menu = {
       { label = 'Bash', args = { 'bash', '-l' } },
       { label = 'Fish', args = { 'fish', '-l' } },
